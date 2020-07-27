@@ -8,6 +8,8 @@ service: dash-serverless-workshop
 provider:
   name: aws
   stage: ${opt:stage}
+  deploymentBucket:
+    name: dash-serverless-workshop-deployment
   imageBucketName: dash-serverless-workshop-images-${opt:stage}
   environment:
     BUCKET_NAME: ${self:provider.imageBucketName}
@@ -33,6 +35,6 @@ functions:
           event: s3:ObjectRemoved:*
 ```
 
-This is creating the S3 bucket and Lambda function that we're going to be using. As a handler it uses the `handler` function that we just wrote in `create-image-upload-url.js`.
+This will create the S3 bucket and Lambda function that we're going to be using. The Lambda function will use the `handler` that we just wrote in `create-image-upload-url.js`.
 
 [Serverless.yml reference](https://serverless.com/framework/docs/providers/aws/guide/serverless.yml/)

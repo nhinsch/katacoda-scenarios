@@ -1,5 +1,10 @@
 The first thing we'll do is install the Serverless Framework in our environment.
 
-To install enter this command: `npm install -g serverless`.
+To install:
 
-You should now be able to `sls -v`.
+```bash
+cd workshop
+npm install -g serverless
+```
+
+You can verify that Serverless Framework was installed with `sls -v`.
