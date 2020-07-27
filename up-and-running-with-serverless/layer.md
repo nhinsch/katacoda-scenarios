@@ -1,19 +1,16 @@
-Add the following Datadog Lambda layer to our Lambda function.
+We can add a Lambda Layer to our Lambda function to collect additional metrics. The easiest way to do this is with Datadog's plugin for the Serverless Framework.
+
+Install the plugin with `npm install --save-dev serverless-plugin-datadog`.
+
+Then add the following to your `serverless.yml` file:
 
 ```yaml
-functions:
-  create-image-upload-url:
-    layers:
-      - arn:aws:lambda:us-east-1:464622532012:layer:Datadog-Node10-x:2
+plugins:
+  - serverless-plugin-datadog
+
+custom:
+	datadog:
+		flushMetricsToLogs: true
 ```
 
-Set the following environment variables:
-
-- DD_FLUSH_TO_LOG
-
-```yaml
-    environment:
-        DD_FLUSH_TO_LOG: True
-```
-
-[Learn more about Datadog Lambda layers](https://docs.datadoghq.com/integrations/amazon_lambda/?tab=node#installing-and-using-the-datadog-layer)
+[Learn more about Datadog Lambda Layers](https://docs.datadoghq.com/integrations/amazon_lambda/?tab=node#installing-and-using-the-datadog-layer)

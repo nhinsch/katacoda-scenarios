@@ -10,7 +10,7 @@ provider:
   stage: ${opt:stage}
   deploymentBucket:
     name: dash-serverless-workshop-deployment
-  imageBucketName: dash-serverless-workshop-images-${opt:stage}
+  imageBucketName: dash-serverless-workshop-images
   environment:
     BUCKET_NAME: ${self:provider.imageBucketName}
   iamRoleStatements:

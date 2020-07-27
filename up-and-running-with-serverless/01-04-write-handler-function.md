@@ -15,7 +15,7 @@ module.exports.handler = async (event, context) => {
 
   const id = `${uuid()}.jpg`;
   const key = `unprocessed/${id}`;
-  const publicUrl = `http://${bucket}.s3.amazonaws.com/processed/${id}`;
+  const publicUrl = `http://${bucket}.s3.amazonaws.com/unprocessed/${id}`;
 
   const signedUrlExpireSeconds = 60 * 3;
 

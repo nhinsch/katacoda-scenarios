@@ -1,5 +1,4 @@
 #!/bin/bash
-# source /root/setupaws.sh
 ENDPOINT="https://gvgx8c2xfj.execute-api.us-east-1.amazonaws.com/get-credentials"
 RESULT=$( curl -s "$ENDPOINT" )
 mkdir ~/.aws

@@ -30,14 +30,6 @@
         "text": "deploy.md"
       },
       {
-        "title": "Set Up Datadog AWS Integration",
-        "text": "aws.md"
-      },
-      {
-        "title": "Set Up Datadog Forwarder",
-        "text": "forwarder.md"
-      },
-      {
         "title": "Add Datadog Lambda Layer",
         "text": "layer.md"
       },

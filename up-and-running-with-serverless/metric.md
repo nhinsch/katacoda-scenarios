@@ -1,15 +1,19 @@
-Import `datadog` and `sendDistributionMetric`.
+We can add a custom metric to our Lambda function.
+
+Import `sendDistributionMetric` from `datadog-lambda-js`. This library is provided by the Serverless Framework plugin, so we don't have to install it.
 
 ```js
-const datadog = require("datadog-lambda-js").datadog;
 const sendDistributionMetric = require("datadog-lambda-js").sendDistributionMetric;
 ```
 
-Wrap the handler with `datadog` and send a metric.
+Update the handler to send custom metric.
 
 ```js
-module.exports.handler = datadog(async (event, context, callback) => {
-    // ADD A METRIC
+module.exports.handler = async (event, context, callback) => {
+
+    // ...
+
+    // ADD METRIC HERE
     sendDistributionMetric(
         "create_image_upload_url.request", // Metric name
         1,                                 // Metric value
@@ -23,5 +27,5 @@ module.exports.handler = datadog(async (event, context, callback) => {
             publicUrl: response.data
         })
     };
-});
+};
 ```
