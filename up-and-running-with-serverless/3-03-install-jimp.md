@@ -1,4 +1,4 @@
-We are going to install a new dependency to our function called Jimp, which is a pure javascript image processing framework.
+Now we are going to install a new dependency for our function called Jimp, which is a pure JavaScript image processing framework.
 
 ```
 npm add jimp

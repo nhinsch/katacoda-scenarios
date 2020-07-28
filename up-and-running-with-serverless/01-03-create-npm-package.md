@@ -1,4 +1,4 @@
-Now that the serverless framework is set up, let's write our handler code that will be called when our Lambda is invoked.
+Now that the Serverless Framework is set up, let's write our handler code that will be called when our Lambda is invoked.
 
 First use your Katacoda editor to create a `package.json` file like this:
 ![how-to-create-katacoda-file](https://d2ddoduugvun08.cloudfront.net/items/0J0v0q3S2J120l1Y1v3G/Image%202019-07-15%20at%204.24.40%20PM.png)
@@ -20,4 +20,9 @@ Fill `package.json` with this to specify our NPM dependencies:
 }
 ```
 
-Now run `npm install` to fetch our dependencies.
+Now fetch our dependencies: 
+
+```bash
+cd workshop
+npm install
+```

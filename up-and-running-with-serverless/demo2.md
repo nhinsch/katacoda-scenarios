@@ -1,4 +1,4 @@
-Browse to [Trace Search](https://app.datadoghq.com/apm/search) under `APM > Trace Search`.
+Browse to [APM App Analytics](https://app.datadoghq.com/apm/app-analytics) under `APM > App Analytics`.
 
 1. Filter by `Env:none` to see your untagged serverless traces.
 1. Increase the time interval to the last hour to see more traces.

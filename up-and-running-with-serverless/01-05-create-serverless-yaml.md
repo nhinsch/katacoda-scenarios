@@ -1,4 +1,4 @@
-Now we'll create the YAML config file for our serverless project.
+Now we'll create the YAML config file for our Serverless project.
 
 Open your editor and create a new file called `serverless.yml`. Then copy the YAML content below into your editor:
 

@@ -2,7 +2,7 @@ We've designed a new app where a major component is allowing users to upload ima
 
 # Getting an upload URL
 
-We're going to store our images in Amazon S3, and will use [pre-signed URLs](https://docs.aws.amazon.com/AmazonS3/latest/dev/PresignedUrlUploadObject.html). This involves sending a request to S3, which will give us a URL that we have a few minutes to POST data to.
+We're going to store our images in Amazon S3, and will use [presigned URLs](https://docs.aws.amazon.com/AmazonS3/latest/dev/PresignedUrlUploadObject.html). This involves sending a request to S3, which will give us a URL that we have a few minutes to POST data to.
 
 # Uploading to S3
 

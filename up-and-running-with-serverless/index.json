@@ -5,8 +5,7 @@
   "details": {
     "intro": {
       "text": "01-01-introduction-to-image-problem.md",
-      "courseData": "setup.sh",
-      "code": "foreground.sh"
+      "courseData": "setup.sh"
     },
     "steps": [
       {

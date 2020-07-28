@@ -15,7 +15,9 @@ module.exports.handler = async (event, context) => {
 
   const id = `${uuid()}.jpg`;
   const key = `unprocessed/${id}`;
-  const publicUrl = `http://${bucket}.s3.amazonaws.com/unprocessed/${id}`;
+
+  const unprocessedImageUrl = `http://${bucket}.s3.amazonaws.com/unprocessed/${id}`;
+  const processedImageUrl = `http://${bucket}.s3.amazonaws.com/unprocessed/${id}`;
 
   const signedUrlExpireSeconds = 60 * 3;
 
@@ -29,15 +31,19 @@ module.exports.handler = async (event, context) => {
 
   const url = s3.getSignedUrl("putObject", options);
 
-  response = await axios.get(
-    `https://tinyurl.com/api-create.php?url=${publicUrl}`
+  const unprocessedImageTinyUrlResponse = await axios.get(
+    `https://tinyurl.com/api-create.php?url=${unprocessedImageUrl}`
+  );
+  const processedImageTinyUrlResponse = await axios.get(
+    `https://tinyurl.com/api-create.php?url=${processedImageUrl}`
   );
 
   return {
     statusCode: 202,
     body: JSON.stringify({
       uploadUrl: url,
-      publicUrl: response.data
+      unprocessedImageUrl: unprocessedImageTinyUrlResponse.data
+      processedImageUrl: processedImageTinyUrlResponse.data
     })
   };
 };
