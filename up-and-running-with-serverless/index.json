@@ -107,7 +107,7 @@
           "file": "datadoge-large.jpeg",
           "target": "/root/workshop",
           "chmod": "+x"
-        },
+        }
 
       ]
     }
