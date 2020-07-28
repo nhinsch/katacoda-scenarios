@@ -17,7 +17,7 @@ module.exports.handler = async (event, context) => {
   const key = `unprocessed/${id}`;
 
   const unprocessedImageUrl = `http://${bucket}.s3.amazonaws.com/unprocessed/${id}`;
-  const processedImageUrl = `http://${bucket}.s3.amazonaws.com/unprocessed/${id}`;
+  const processedImageUrl = `http://${bucket}.s3.amazonaws.com/processed/${id}`;
 
   const signedUrlExpireSeconds = 60 * 3;
 
@@ -42,7 +42,7 @@ module.exports.handler = async (event, context) => {
     statusCode: 202,
     body: JSON.stringify({
       uploadUrl: url,
-      unprocessedImageUrl: unprocessedImageTinyUrlResponse.data
+      unprocessedImageUrl: unprocessedImageTinyUrlResponse.data,
       processedImageUrl: processedImageTinyUrlResponse.data
     })
   };

@@ -4,93 +4,93 @@
   "time": "Two hours",
   "details": {
     "intro": {
-      "text": "01-01-introduction-to-image-problem.md",
+      "text": "intro.md",
       "courseData": "setup.sh"
     },
     "steps": [
       {
         "title": "Set up serverless framework",
-        "text": "01-02-set-up-serverless-framework.md"
+        "text": "01-install-serverless.md"
       },
       {
         "title": "Create handler function package",
-        "text": "01-03-create-npm-package.md"
+        "text": "02-install-dependencies.md"
       },
       {
         "title": "Write handler function code",
-        "text": "01-04-write-handler-function.md"
+        "text": "03-write-handler.md"
       },
       {
         "title": "Create serverless YAML",
-        "text": "01-05-create-serverless-yaml.md"
+        "text": "04-serverless-yml.md"
       },
       {
         "title": "Deploy Serverless project",
-        "text": "deploy.md"
+        "text": "05-first-deploy.md"
       },
       {
-        "title": "Add Datadog Lambda Layer",
-        "text": "layer.md"
+        "title": "Add Datadog Serverless Plugin",
+        "text": "06-serverless-plugin.md"
       },
       {
         "title": "Custom Metric",
-        "text": "metric.md"
+        "text": "07-metric.md"
       },
       {
         "title": "Log",
-        "text": "log.md"
+        "text": "08-log.md"
       },
       {
         "title": "Tracing",
-        "text": "tracing.md"
+        "text": "09-tracing.md"
       },
       {
         "title": "Deploy",
-        "text": "deploy-second.md"
+        "text": "10-second-deploy.md"
       },
       {
         "title": "Break",
-        "text": "break.md"
+        "text": "11-break.md"
       },
       {
         "title": "Sign into Datadog",
-        "text": "demo0.md"
+        "text": "12-sign-in.md"
       },
       {
         "title": "Using the Serverless Page",
-        "text": "demo1.md"
+        "text": "13-serverless-page.md"
       },
       {
         "title": "Finding Cold Starts",
-        "text": "demo2.md"
+        "text": "14-cold-starts.md"
       },
       {
         "title": "Using the Service Map",
-        "text": "demo3.md"
+        "text": "15-service-map.md"
       },
       {
         "title": "Debugging with Log Analytics",
-        "text": "demo4.md"
+        "text": "16-log-analytics.md"
       },
       {
         "title": "Add New Function to Serverless.yml",
-        "text": "3-01-update-serverless-yml-function.md"
+        "text": "17-process-image-yml.md"
       },
       {
         "title": "Install Jimp",
-        "text": "3-03-install-jimp.md"
+        "text": "18-install-jimp.md"
       },
       {
         "title": "Implement Process Image Lambda",
-        "text": "3-04-add-process-image-lambda.md"
+        "text": "19-process-image-code.md"
       },
       {
         "title": "Deploy and Test",
-        "text": "3-05-deploy-and-test.md"
+        "text": "20-third-deploy.md"
       },
       {
         "title": "Another Test Case",
-        "text": "3-06-now-with-a-bigger-image.md"
+        "text": "21-test-large-image.md"
       }
     ],
     "finish": {
@@ -102,7 +102,13 @@
           "file": "upload.sh",
           "target": "/root/workshop",
           "chmod": "+x"
-        }
+        },
+        {
+          "file": "datadoge-large.jpeg",
+          "target": "/root/workshop",
+          "chmod": "+x"
+        },
+
       ]
     }
   },

@@ -9,5 +9,3 @@ And again run this script to test posting the image to our service:
 ```bash
 ./upload.sh "<stage-name>" testimage.jpg
 ```
-
-Give s3 a few seconds to process, and then open up the url printed out by the upload script.
