@@ -3,7 +3,6 @@ Create another file called `create-image-upload-url.js` with these contents::
 
 ```js
 const AWSXRay = require("aws-xray-sdk");
-AWSXRay.captureHTTPsGlobal(require("https"));
 var AWS = AWSXRay.captureAWS(require('aws-sdk'));
 const uuid = require("uuid/v4");
 

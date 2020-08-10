@@ -3,7 +3,6 @@ Next let's add the implementation for the process image Lambda. Create a new fil
 
 ```js
 const AWSXRay = require("aws-xray-sdk");
-AWSXRay.captureHTTPsGlobal(require("https"));
 var AWS = AWSXRay.captureAWS(require('aws-sdk'));
 const Jimp = require("jimp");
 

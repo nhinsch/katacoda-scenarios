@@ -1,10 +1,15 @@
-Deploy with the following command.
+Create a variable called STAGE and set it to the first letter of your first name followed by your last name. We will use this to avoid collisions, as we are sharing a single AWS account.
 
 ```bash
-sls deploy --stage <stage-name>
+# use the first letter of your first name followed by your last name
+STAGE="jsmith" 
 ```
 
-NOTE: Because we are deploying to a shared environment, please update `<stage-name>` to something unique, e.g., your full name, say `john-smith` to avoid collisions.
+Then, deploy with the following command.
+
+```bash
+sls deploy --stage $STAGE
+```
 
 Now, it's time to test our new function.
 
@@ -13,7 +18,7 @@ Use a command like `wget -O testimage.jpg https://i.imgflip.com/w7qv5.jpg` to do
 Then run this script to test posting the image to our service:
 
 ```bash
-./upload.sh "<stage-name>" testimage.jpg
+./upload.sh "$STAGE" testimage.jpg
 ```
 
 Give S3 a few seconds to process, and then open up the URL printed out by the upload script.

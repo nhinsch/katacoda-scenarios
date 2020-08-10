@@ -1,15 +1,7 @@
-We've designed a new app where a major component is allowing users to upload images. To take advantage of the benefits of serverless we've decided to implement the image uploading service using AWS Lambda.
+We are going to build an image processing service with a serverless architecture.
 
-# Getting an upload URL
+The service will consist of two Lambda functions:
+- A Lambda that gets a presigned URL from Amazon S3 that allows us to upload an image
+- A Lambda that processes an image by making it square and grayscale
 
-We're going to store our images in Amazon S3, and will use [presigned URLs](https://docs.aws.amazon.com/AmazonS3/latest/dev/PresignedUrlUploadObject.html). This involves sending a request to S3, which will give us a URL that we have a few minutes to POST data to.
-
-# Uploading to S3
-
-We'll POST our image to this signed URL in order to upload it to S3.
-
-# Processing the image
-
-Our first implementation will be very simple with no image processing.
-
-Then, we'll add features to compress the image, make it a square, make it grayscale, and upload the result to a public S3 bucket.
+First we will implement the image upload URL Lambda. Then we will add the image processing Lambda.
