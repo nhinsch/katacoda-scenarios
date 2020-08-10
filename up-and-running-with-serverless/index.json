@@ -98,13 +98,7 @@
           "file": "upload.sh",
           "target": "/root/workshop",
           "chmod": "+x"
-        },
-        {
-          "file": "datadoge-large.jpeg",
-          "target": "/root/workshop",
-          "chmod": "+x"
         }
-
       ]
     }
   },
