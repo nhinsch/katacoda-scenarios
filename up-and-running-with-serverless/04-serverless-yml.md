@@ -31,10 +31,6 @@ functions:
       - http:
           path: images/uploads
           method: post
-      - s3:
-          bucket: ${self:provider.imageBucketName}
-          existing: true
-          event: s3:ObjectRemoved:*
 ```
 
 This will create the S3 bucket and Lambda function that we're going to be using. The Lambda function will use the `handler` that we just wrote in `create-image-upload-url.js`.

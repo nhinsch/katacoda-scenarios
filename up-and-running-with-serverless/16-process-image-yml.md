@@ -29,10 +29,6 @@ functions:
       - http:
           path: images/uploads
           method: post
-      - s3:
-          bucket: ${self:provider.imageBucketName}
-          existing: true
-          event: s3:ObjectRemoved:*
   process-image:
     runtime: nodejs10.x
     name: process-image-${self:provider.stage}
@@ -40,6 +36,7 @@ functions:
     events: # Emits event when a jpg file is uploaded to the directory
       - s3:
           bucket: ${self:provider.imageBucketName}
+          existing: true
           event: s3:ObjectCreated:*
           rules:
             - prefix: ${self:provider.stage}/unprocessed

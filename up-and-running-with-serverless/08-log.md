@@ -14,15 +14,16 @@ const sendDistributionMetric = require("datadog-lambda-js").sendDistributionMetr
 module.exports.handler = async (event, context) => {
   const s3 = new AWS.S3();
   const bucket = process.env.BUCKET_NAME;
+  const stage = process.env.STAGE;
 
   const id = `${uuid()}.jpg`;
-  const key = `unprocessed/${id}`;
+  const key = `${stage}/unprocessed/${id}`;
 
   // Added logging
   console.info(`Created image id: ${id}`);
 
-  const unprocessedImageUrl = `http://${bucket}.s3.amazonaws.com/unprocessed/${id}`;
-  const processedImageUrl = `http://${bucket}.s3.amazonaws.com/processed/${id}`;
+  const unprocessedImageUrl = `http://${bucket}.s3.amazonaws.com/${stage}/unprocessed/${id}`;
+  const processedImageUrl = `http://${bucket}.s3.amazonaws.com/${stage}/processed/${id}`;
 
   const signedUrlExpireSeconds = 60 * 3;
 

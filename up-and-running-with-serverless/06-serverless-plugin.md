@@ -33,10 +33,6 @@ functions:
       - http:
           path: images/uploads
           method: post
-      - s3:
-          bucket: ${self:provider.imageBucketName}
-          existing: true
-          event: s3:ObjectRemoved:*
 
 plugins:
   - serverless-plugin-datadog

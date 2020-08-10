@@ -42,47 +42,47 @@
       },
       {
         "title": "Deploy",
-        "text": "10-second-deploy.md"
+        "text": "09-second-deploy.md"
       },
       {
         "title": "Break",
-        "text": "11-break.md"
+        "text": "10-break.md"
       },
       {
         "title": "Sign into Datadog",
-        "text": "12-sign-in.md"
+        "text": "11-sign-in.md"
       },
       {
         "title": "Using the Serverless Page",
-        "text": "13-serverless-page.md"
+        "text": "12-serverless-page.md"
       },
       {
         "title": "Finding Cold Starts",
-        "text": "14-cold-starts.md"
+        "text": "13-cold-starts.md"
       },
       {
         "title": "Using the Service Map",
-        "text": "15-service-map.md"
+        "text": "14-service-map.md"
       },
       {
         "title": "Debugging with Log Analytics",
-        "text": "16-log-analytics.md"
+        "text": "15-log-analytics.md"
       },
       {
         "title": "Add New Function to Serverless.yml",
-        "text": "17-process-image-yml.md"
+        "text": "16-process-image-yml.md"
       },
       {
         "title": "Install Jimp",
-        "text": "18-install-jimp.md"
+        "text": "17-install-jimp.md"
       },
       {
         "title": "Implement Process Image Lambda",
-        "text": "19-process-image-code.md"
+        "text": "18-process-image-code.md"
       },
       {
         "title": "Deploy and Test",
-        "text": "20-third-deploy.md"
+        "text": "19-third-deploy.md"
       }
     ],
     "finish": {
