@@ -13,6 +13,7 @@ provider:
   imageBucketName: dash-serverless-workshop-images
   environment:
     BUCKET_NAME: ${self:provider.imageBucketName}
+    STAGE: ${self:provider.stage}
   iamRoleStatements:
     - Effect: "Allow"
       Action:
@@ -32,6 +33,7 @@ functions:
           method: post
       - s3:
           bucket: ${self:provider.imageBucketName}
+          existing: true
           event: s3:ObjectRemoved:*
 ```
 

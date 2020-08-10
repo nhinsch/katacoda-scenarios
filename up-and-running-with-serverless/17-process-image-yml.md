@@ -11,6 +11,7 @@ provider:
   imageBucketName: dash-serverless-workshop-images
   environment:
     BUCKET_NAME: ${self:provider.imageBucketName}
+    STAGE: ${self:provider.stage}
   iamRoleStatements:
     - Effect: "Allow"
       Action:
@@ -41,7 +42,7 @@ functions:
           bucket: ${self:provider.imageBucketName}
           event: s3:ObjectCreated:*
           rules:
-            - prefix: unprocessed/
+            - prefix: ${self:provider.stage}/unprocessed
             - suffix: .jpg
 
 plugins:

@@ -15,6 +15,7 @@ provider:
   imageBucketName: dash-serverless-workshop-images
   environment:
     BUCKET_NAME: ${self:provider.imageBucketName}
+    STAGE: ${self:provider.stage}
   iamRoleStatements:
     - Effect: "Allow"
       Action:

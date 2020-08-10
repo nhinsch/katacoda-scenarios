@@ -21,7 +21,8 @@ async function processImage(record, s3) {
   const s3Record = record.s3;
   const bucket = s3Record.bucket.arn.split(":::")[1];
   const key = s3Record.object.key;
-  const id = key.split("/")[1];
+  const stage = key.split("/")[0];
+  const id = key.split("/")[2];
 
   console.log(`Reading file ${key} with id ${id} from bucket ${bucket}`);
 
@@ -41,7 +42,7 @@ async function processImage(record, s3) {
     .putObject({
       Bucket: bucket,
       ACL: "public-read",
-      Key: `processed/${id}`,
+      Key: `${stage}/processed/${id}`,
       Body: image,
       ContentType: Jimp.MIME_JPEG
     })
